@@ -42,6 +42,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.btn:
                 Toast.makeText(MainActivity.this, "Button", Toast.LENGTH_SHORT).show();
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 break;
 
                 default:break;
