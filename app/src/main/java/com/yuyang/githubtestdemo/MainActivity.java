@@ -29,17 +29,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
 
         switch (view.getId()){
-
-
-
-        }
-
-
-
-
-
-
-        switch (view.getId()){
             case R.id.tv:
                 Toast.makeText(MainActivity.this, "TextView", Toast.LENGTH_SHORT).show();
                 try {
@@ -58,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 break;
 
-                default:break;
+            default:break;
 
         }
 
