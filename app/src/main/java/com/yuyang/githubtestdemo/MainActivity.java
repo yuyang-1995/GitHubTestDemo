@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
    private TextView tv;
@@ -18,6 +19,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         tv = findViewById(R.id.tv);
         btn = findViewById(R.id.btn);
+
+        tv.setOnClickListener(this);
+        btn.setOnClickListener(this);
 
     }
 
@@ -34,6 +38,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
+
+        switch (view.getId()){
+            case R.id.tv:
+                Toast.makeText(MainActivity.this, "TextView", Toast.LENGTH_SHORT).show();
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                break;
+
+            case R.id.btn:
+                Toast.makeText(MainActivity.this, "Button", Toast.LENGTH_SHORT).show();
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                break;
+
+                default:break;
+
+        }
 
     }
 }
