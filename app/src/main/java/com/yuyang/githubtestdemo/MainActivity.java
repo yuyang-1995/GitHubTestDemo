@@ -31,6 +31,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (view.getId()){
             case R.id.tv:
                 Toast.makeText(MainActivity.this, "TextView", Toast.LENGTH_SHORT).show();
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 break;
 
             case R.id.btn:
